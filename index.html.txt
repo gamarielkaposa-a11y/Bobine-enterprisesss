@@ -1,0 +1,2458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Bobine Enterprises - Professional construction, renovation, plumbing and project management services in Zimbabwe.">
+    <meta name="keywords" content="Bobine Enterprises, construction Zimbabwe, building, renovations, plumbing, construction company">
+    <meta name="author" content="Bobine Enterprises">
+
+    <title>Bobine Enterprises | Construction & Engineering</title>
+
+    <style>
+
+        :root {
+            --yellow: #f2a900;
+            --dark: #111111;
+            --dark2: #1d1d1d;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --text: #333333;
+            --green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: rgba(17,17,17,0.97);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6%;
+            z-index: 1000;
+            border-bottom: 3px solid var(--yellow);
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--yellow);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.72),
+                    rgba(0,0,0,.72)
+                ),
+                url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 100px 20px 50px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeUp 1.2s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: var(--yellow);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.2rem;
+            color: #eeeeee;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--yellow);
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-dark {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: var(--yellow);
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            background: var(--dark);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--yellow);
+        }
+
+        .stat h4 {
+            font-size: 1.8rem;
+            color: var(--yellow);
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 6px;
+            border-top: 5px solid var(--dark);
+            transition: .3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--yellow);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 7px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .project:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            color: white;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.9)
+            );
+        }
+
+        .project-info h3 {
+            color: var(--yellow);
+        }
+
+        /* ================= WHY US ================= */
+
+        .why-us {
+            background: var(--dark);
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .why-card h3 {
+            color: var(--yellow);
+            margin: 15px 0;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            padding: 18px;
+            background: white;
+            border-left: 4px solid var(--yellow);
+        }
+
+        .contact-item a {
+            color: var(--dark);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--yellow);
+        }
+
+        .whatsapp-contact {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 22px;
+            background: var(--green);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: .3s;
+        }
+
+        .whatsapp-contact:hover {
+            transform: translateY(-3px);
+            background: #1ebe5d;
+        }
+
+        /* ================= FORM ================= */
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 7px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            background: var(--yellow);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        form button:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* ================= WHATSAPP FLOATING BUTTON ================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,.3);
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b0b0b;
+            color: white;
+            padding: 45px 6%;
+            text-align: center;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer span {
+            color: var(--yellow);
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        .footer-contact {
+            margin: 20px 0;
+        }
+
+        .footer-contact a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 800px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 75px;
+                right: -100%;
+                width: 100%;
+                background: var(--dark);
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+                transition: .4s;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                padding: 12px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .projects-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            form {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Bobine <span>Enterprises</span>
+    </div>
+
+    <div
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open menu"
+    >
+        ☰
+    </div>
+
+    <nav id="nav">
+
+        <a href="#home" onclick="closeMenu()">Home</a>
+
+        <a href="#about" onclick="closeMenu()">About</a>
+
+        <a href="#services" onclick="closeMenu()">Services</a>
+
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Building <span>Your Vision</span>
+        </h1>
+
+        <p>
+            Professional construction, renovation, plumbing and
+            project management services delivered with quality,
+            precision and integrity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="btn">
+                Get A Free Quote
+            </a>
+
+            <a href="#projects" class="btn btn-dark">
+                View Our Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About <span>Us</span>
+        </h2>
+
+        <p>
+            Building strong foundations for homes,
+            businesses and communities.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
+                alt="Construction workers on site"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <h3>
+                Quality Construction. Reliable Results.
+            </h3>
+
+            <p>
+                Bobine Enterprises provides professional construction
+                and project management solutions for residential and
+                commercial clients.
+            </p>
+
+            <p>
+                Our goal is simple: deliver safe, durable and
+                high-quality construction projects while respecting
+                our clients' budgets and deadlines.
+            </p>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <h4>100%</h4>
+
+                    <p>
+                        Commitment
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h4>24/7</h4>
+
+                    <p>
+                        Support
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h4>100%</h4>
+
+                    <p>
+                        Quality
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <h2>
+            Our <span>Services</span>
+        </h2>
+
+        <p>
+            Professional solutions from planning
+            to project completion.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏗️
+            </div>
+
+            <h3>
+                Commercial Construction
+            </h3>
+
+            <p>
+                Construction of offices, retail buildings,
+                warehouses, commercial complexes and other
+                business facilities.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏠
+            </div>
+
+            <h3>
+                Residential Construction
+            </h3>
+
+            <p>
+                New homes, extensions, renovations and
+                customized residential construction projects.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔧
+            </div>
+
+            <h3>
+                Renovations
+            </h3>
+
+            <p>
+                Modernization and renovation services designed
+                to improve the functionality and appearance
+                of existing properties.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📐
+            </div>
+
+            <h3>
+                Project Management
+            </h3>
+
+            <p>
+                Professional project coordination,
+                scheduling, budgeting and site supervision.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🚰
+            </div>
+
+            <h3>
+                Plumbing
+            </h3>
+
+            <p>
+                Plumbing installation, repairs and maintenance
+                for residential and commercial properties.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏢
+            </div>
+
+            <h3>
+                Structural Work
+            </h3>
+
+            <p>
+                Reliable structural construction solutions
+                focused on strength, safety and long-term
+                durability.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="section-title">
+
+        <h2>
+            Featured <span>Projects</span>
+        </h2>
+
+        <p>
+            A selection of construction work
+            and projects.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern office building"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Modern Office Complex
+                </h3>
+
+                <p>
+                    Commercial Construction
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Bobine Enterprises - Professional construction, renovation, plumbing and project management services in Zimbabwe.">
+    <meta name="keywords" content="Bobine Enterprises, construction Zimbabwe, building, renovations, plumbing, construction company">
+    <meta name="author" content="Bobine Enterprises">
+
+    <title>Bobine Enterprises | Construction & Engineering</title>
+
+    <style>
+
+        :root {
+            --yellow: #f2a900;
+            --dark: #111111;
+            --dark2: #1d1d1d;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --text: #333333;
+            --green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background: rgba(17,17,17,0.97);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6%;
+            z-index: 1000;
+            border-bottom: 3px solid var(--yellow);
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--yellow);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.72),
+                    rgba(0,0,0,.72)
+                ),
+                url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 100px 20px 50px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeUp 1.2s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: var(--yellow);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.2rem;
+            color: #eeeeee;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--yellow);
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-dark {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: white;
+            color: #111;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: var(--yellow);
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            background: var(--dark);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--yellow);
+        }
+
+        .stat h4 {
+            font-size: 1.8rem;
+            color: var(--yellow);
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 6px;
+            border-top: 5px solid var(--dark);
+            transition: .3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--yellow);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 7px;
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .project:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            color: white;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.9)
+            );
+        }
+
+        .project-info h3 {
+            color: var(--yellow);
+        }
+
+        /* ================= WHY US ================= */
+
+        .why-us {
+            background: var(--dark);
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .why-card h3 {
+            color: var(--yellow);
+            margin: 15px 0;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            padding: 18px;
+            background: white;
+            border-left: 4px solid var(--yellow);
+        }
+
+        .contact-item a {
+            color: var(--dark);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--yellow);
+        }
+
+        .whatsapp-contact {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 22px;
+            background: var(--green);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: .3s;
+        }
+
+        .whatsapp-contact:hover {
+            transform: translateY(-3px);
+            background: #1ebe5d;
+        }
+
+        /* ================= FORM ================= */
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 7px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            background: var(--yellow);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        form button:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* ================= WHATSAPP FLOATING BUTTON ================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,.3);
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0b0b0b;
+            color: white;
+            padding: 45px 6%;
+            text-align: center;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer span {
+            color: var(--yellow);
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        .footer-contact {
+            margin: 20px 0;
+        }
+
+        .footer-contact a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        /* ================= ANIMATION ================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 800px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 75px;
+                right: -100%;
+                width: 100%;
+                background: var(--dark);
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+                transition: .4s;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                padding: 12px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .projects-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            form {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Bobine <span>Enterprises</span>
+    </div>
+
+    <div
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open menu"
+    >
+        ☰
+    </div>
+
+    <nav id="nav">
+
+        <a href="#home" onclick="closeMenu()">Home</a>
+
+        <a href="#about" onclick="closeMenu()">About</a>
+
+        <a href="#services" onclick="closeMenu()">Services</a>
+
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Building <span>Your Vision</span>
+        </h1>
+
+        <p>
+            Professional construction, renovation, plumbing and
+            project management services delivered with quality,
+            precision and integrity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="btn">
+                Get A Free Quote
+            </a>
+
+            <a href="#projects" class="btn btn-dark">
+                View Our Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About <span>Us</span>
+        </h2>
+
+        <p>
+            Building strong foundations for homes,
+            businesses and communities.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
+                alt="Construction workers on site"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <h3>
+                Quality Construction. Reliable Results.
+            </h3>
+
+            <p>
+                Bobine Enterprises provides professional construction
+                and project management solutions for residential and
+                commercial clients.
+            </p>
+
+            <p>
+                Our goal is simple: deliver safe, durable and
+                high-quality construction projects while respecting
+                our clients' budgets and deadlines.
+            </p>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <h4>100%</h4>
+
+                    <p>
+                        Commitment
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h4>24/7</h4>
+
+                    <p>
+                        Support
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h4>100%</h4>
+
+                    <p>
+                        Quality
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <h2>
+            Our <span>Services</span>
+        </h2>
+
+        <p>
+            Professional solutions from planning
+            to project completion.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏗️
+            </div>
+
+            <h3>
+                Commercial Construction
+            </h3>
+
+            <p>
+                Construction of offices, retail buildings,
+                warehouses, commercial complexes and other
+                business facilities.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏠
+            </div>
+
+            <h3>
+                Residential Construction
+            </h3>
+
+            <p>
+                New homes, extensions, renovations and
+                customized residential construction projects.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔧
+            </div>
+
+            <h3>
+                Renovations
+            </h3>
+
+            <p>
+                Modernization and renovation services designed
+                to improve the functionality and appearance
+                of existing properties.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📐
+            </div>
+
+            <h3>
+                Project Management
+            </h3>
+
+            <p>
+                Professional project coordination,
+                scheduling, budgeting and site supervision.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🚰
+            </div>
+
+            <h3>
+                Plumbing
+            </h3>
+
+            <p>
+                Plumbing installation, repairs and maintenance
+                for residential and commercial properties.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🏢
+            </div>
+
+            <h3>
+                Structural Work
+            </h3>
+
+            <p>
+                Reliable structural construction solutions
+                focused on strength, safety and long-term
+                durability.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="section-title">
+
+        <h2>
+            Featured <span>Projects</span>
+        </h2>
+
+        <p>
+            A selection of construction work
+            and projects.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern office building"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Modern Office Complex
+                </h3>
+
+                <p>
+                    Commercial Construction
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85"
+                alt="Construction site"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Construction Development
+                </h3>
+
+                <p>
+                    Structural Construction
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern residential house"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Premium Residential Build
+                </h3>
+
+                <p>
+                    Residential Construction
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1200&q=85"
+                alt="Building construction"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Building Development
+                </h3>
+
+                <p>
+                    General Construction
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?auto=format&fit=crop&w=1200&q=85"
+                alt="Construction workers"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Site Development
+                </h3>
+
+                <p>
+                    Project Management
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project">
+
+            <img
+                src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1200&q=85"
+                alt="House construction"
+                loading="lazy"
+            >
+
+            <div class="project-info">
+
+                <h3>
+                    Custom Home
+                </h3>
+
+                <p>
+                    Residential Construction
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-us">
+
+    <div class="section-title">
+
+        <h2 style="color:white;">
+            Why Choose <span>Bobine?</span>
+        </h2>
+
+        <p style="color:#ccc;">
+            We focus on quality, reliability
+            and customer satisfaction.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div style="font-size:45px;">
+                🛡️
+            </div>
+
+            <h3>
+                Safety First
+            </h3>
+
+            <p>
+                Safety is a priority throughout
+                every stage of our projects.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div style="font-size:45px;">
+                ⭐
+            </div>
+
+            <h3>
+                Quality Work
+            </h3>
+
+            <p>
+                We aim to deliver durable and
+                professional construction solutions.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div style="font-size:45px;">
+                🤝
+            </div>
+
+            <h3>
+                Trusted Service
+            </h3>
+
+            <p>
+                We work closely with clients to
+                understand their needs and goals.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            Contact <span>Us</span>
+        </h2>
+
+        <p>
+            Tell us about your project and request
+            a quotation. We will discuss your
+            requirements and provide a price.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <h3>
+                Let's Build Something Great
+            </h3>
+
+            <p>
+                Whether you're planning a new home,
+                commercial building, renovation,
+                plumbing job or construction project,
+                contact Bobine Enterprises today.
+            </p>
+
+
+            <div class="contact-item">
+
+                📞 <strong>Phone:</strong><br>
+
+                <a href="tel:+263787643842">
+                    +263 787 643 842
+                </a>
+
+                <br>
+
+                <a href="tel:+263773920095">
+                    +263 773 920 095
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📧 <strong>Email:</strong><br>
+
+                <a href="mailto:info@bobineenterprises.com">
+                    info@bobineenterprises.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                📍 <strong>Location:</strong><br>
+
+                Zimbabwe
+
+            </div>
+
+
+            <!-- DIRECT WHATSAPP -->
+
+            <a
+                class="whatsapp-contact"
+                href="https://wa.me/263787643842?text=Hello%20Bobine%20Enterprises,%20I%20would%20like%20to%20request%20a%20quotation%20for%20a%20construction%20project."
+                target="_blank"
+                rel="noopener"
+            >
+                💬 Request Quote on WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <form onsubmit="submitForm(event)">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name / Company Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    required
+                    placeholder="Your name or company"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder="Your email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Your phone number"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="service">
+                    Service Required
+                </label>
+
+                <select id="service" required>
+
+                    <option value="">
+                        Select a service
+                    </option>
+
+                    <option value="Commercial Construction">
+                        Commercial Construction
+                    </option>
+
+                    <option value="Residential Construction">
+                        Residential Construction
+                    </option>
+
+                    <option value="Renovations">
+                        Renovations
+                    </option>
+
+                    <option value="Plumbing">
+                        Plumbing
+                    </option>
+
+                    <option value="Project Management">
+                        Project Management
+                    </option>
+
+                    <option value="Structural Work">
+                        Structural Work
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="project">
+                    Project Details
+                </label>
+
+                <textarea
+                    id="project"
+                    rows="6"
+                    required
+                    placeholder="Tell us about your project, location, size and what you need..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                REQUEST A QUOTATION
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/263787643842?text=Hello%20Bobine%20Enterprises,%20I%20would%20like%20to%20request%20a%20quotation."
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Bobine Enterprises on WhatsApp"
+>
+    💬
+</a>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        Bobine <span>Enterprises</span>
+    </h2>
+
+    <p>
+        Professional Construction & Engineering Services
+    </p>
+
+
+    <div class="footer-contact">
+
+        📞
+        <a href="tel:+263787643842">
+            +263 787 643 842
+        </a>
+
+        &nbsp; | &nbsp;
+
+        📞
+        <a href="tel:+263773920095">
+            +263 773 920 095
+        </a>
+
+        <br><br>
+
+        📧
+        <a href="mailto:info@bobineenterprises.com">
+            info@bobineenterprises.com
+        </a>
+
+    </div>
+
+
+    <p>
+        &copy; 2026 Bobine Enterprises.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Built for Safety, Quality and Structural Integrity.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* ================= MOBILE MENU ================= */
+
+    function toggleMenu() {
+
+        const nav =
+            document.getElementById("nav");
+
+        nav.classList.toggle("active");
+
+    }
+
+
+    function closeMenu() {
+
+        const nav =
+            document.getElementById("nav");
+
+        nav.classList.remove("active");
+
+    }
+
+
+    /* ================= CONTACT FORM ================= */
+
+    function submitForm(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const service =
+            document.getElementById("service").value;
+
+        const project =
+            document.getElementById("project").value.trim();
+
+
+        const message =
+            "Hello Bobine Enterprises!%0A%0A" +
+
+            "I would like to request a quotation.%0A%0A" +
+
+            "Name / Company: " +
+            encodeURIComponent(name) +
+            "%0A" +
+
+            "Email: " +
+            encodeURIComponent(email) +
+            "%0A" +
+
+            "Phone: " +
+            encodeURIComponent(phone) +
+            "%0A" +
+
+            "Service Required: " +
+            encodeURIComponent(service) +
+            "%0A%0A" +
+
+            "Project Details:%0A" +
+            encodeURIComponent(project);
+
+
+        const whatsappURL =
+            "https://wa.me/263787643842?text=" +
+            message;
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+
+    /* ================= CLOSE MENU WHEN CLICKING OUTSIDE ================= */
+
+    document.addEventListener(
+        "click",
+        function(event) {
+
+            const nav =
+                document.getElementById("nav");
+
+            const menu =
+                document.querySelector(".menu-btn");
+
+            if (
+                window.innerWidth <= 800 &&
+                nav.classList.contains("active") &&
+                !nav.contains(event.target) &&
+                !menu.contains(event.target)
+            ) {
+
+                nav.classList.remove("active");
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
